@@ -1,0 +1,29 @@
+# Secrets and local state
+.env
+.env.*
+!.env.example
+*.token
+*.secret
+*.pem
+*.key
+credentials/
+state/
+sessions/
+logs/
+cache/
+*.db
+*.db-*
+auth.json
+google_token.json
+google_client_secret.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store

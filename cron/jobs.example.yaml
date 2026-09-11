@@ -1,0 +1,52 @@
+# Human-readable templates for Hermes cron jobs.
+# Create these through Hermes/cronjob so IDs and routing are generated locally.
+# `${...}` values are deployment-specific placeholders.
+jobs:
+  - name: Morning executive brief
+    schedule: "0 6 * * *"
+    deliver: local
+    script: alexa_morning_context.py
+    skills: [daily-operations-briefing]
+    prompt_file: prompts/alexa-morning-brief.md
+  - name: Evening executive brief
+    schedule: "10 21 * * *"
+    deliver: local
+    script: alexa_evening_context.py
+    skills: [daily-operations-briefing, alexa-smart-home-automation]
+    prompt_file: prompts/alexa-evening-brief.md
+  - name: Auction listing change monitor
+    schedule: "* * * * *"
+    deliver: origin
+    script: ebay_bid_watch.py
+    no_agent: true
+  - name: Google Health and Fitbit sync
+    schedule: "35 5,20 * * *"
+    deliver: origin
+    script: google_health_sync.py
+    no_agent: true
+    workdir: "${GOOGLE_HEALTH_PROJECT}"
+  - name: Alexa read-only authentication preflight
+    schedule: "50 5,20 * * *"
+    deliver: origin
+    script: alexa_auth_preflight.py
+    no_agent: true
+  - name: Alexa brief receipt watchdog
+    schedule: "15 6,21 * * *"
+    deliver: origin
+    script: alexa_brief_receipt_watchdog.py
+    no_agent: true
+  - name: Google Health reauthorization reminder
+    schedule: "30 14 * * *"
+    deliver: origin
+    script: google_health_reauth_reminder.py
+    no_agent: true
+  - name: Career Ops staged application consumer
+    schedule: "5 9 * * *"
+    deliver: origin
+    skills: [computer-use]
+    workdir: "${CAREER_OPS_PROJECT}"
+  - name: Financial data freshness watchdog
+    schedule: "40 5 * * *"
+    deliver: origin
+    script: whisper_money_stale_alert.py
+    no_agent: true

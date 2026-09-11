@@ -1,0 +1,12 @@
+# Public, secret-free Hermes settings example.
+# Apply settings with `hermes config set`; do not overwrite config.yaml blindly.
+security:
+  redact_secrets: true
+privacy:
+  redact_pii: true
+approvals:
+  mode: smart
+display:
+  interface: tui
+# Provider credentials, OAuth tokens, channel IDs, phone numbers and API keys
+# intentionally belong in local secret stores and are not represented here.
