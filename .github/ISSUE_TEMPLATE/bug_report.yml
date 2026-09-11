@@ -1,0 +1,49 @@
+name: Bug report
+description: Report a reproducible problem in a collector, watchdog, prompt, or skill
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting a problem. Remove all secrets and personal data before submitting.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Collector or watchdog
+        - Executive brief or prompt
+        - Hermes skill
+        - Cron/config template
+        - Documentation
+        - CI/tests
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: What happened?
+      description: Include the expected and actual behavior.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Use synthetic inputs only. Never paste tokens, cookies, IDs, or personal records.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Hermes version, OS, Python version
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed secrets, credentials, personal data, and live identifiers.
+          required: true
+        - label: This is not a privately reportable security vulnerability.
+          required: true
