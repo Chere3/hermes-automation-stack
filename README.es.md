@@ -134,7 +134,9 @@ Las pruebas cubren parsers, paginación, identidad, escritura atómica, conserva
 
 ## Contribuir
 
-Son bienvenidos issues y pull requests para nuevos colectores de sólo lectura, watchdogs por transición, adaptadores de entrega, compatibilidad multiplataforma y pruebas de redacción o fallos. Antes de añadir una escritura real, abre un issue y documenta límites de autorización y verificación.
+Son bienvenidos issues y pull requests para nuevos colectores de sólo lectura, watchdogs por transición, adaptadores de entrega, compatibilidad multiplataforma y pruebas de redacción o fallos. Puedes empezar por el [validador de enlaces y skills (#1)](https://github.com/Chere3/hermes-automation-stack/issues/1) o el [instalador selectivo con dry-run (#2)](https://github.com/Chere3/hermes-automation-stack/issues/2).
+
+Antes de añadir una escritura real, abre un issue y documenta límites de autorización y verificación.
 
 Lee [CONTRIBUTING.md](CONTRIBUTING.md). Los reportes de seguridad deben enviarse por la vía privada descrita en [SECURITY.md](SECURITY.md).
 

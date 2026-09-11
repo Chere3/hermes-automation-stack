@@ -174,6 +174,11 @@ Good first adaptations:
 - improve cross-platform paths and packaging;
 - contribute redaction, fixture, or failure-mode tests.
 
+Current contribution paths:
+
+- [#1 — Add Markdown link and skill-metadata validation to CI](https://github.com/Chere3/hermes-automation-stack/issues/1) (`good first issue`)
+- [#2 — Build a selective installer with dry-run support](https://github.com/Chere3/hermes-automation-stack/issues/2) (`help wanted`)
+
 Please open an issue before introducing a new live write path. The contribution contract requires deterministic tests, sanitized fixtures, explicit authorization boundaries, and no personal data.
 
 ## Related projects
