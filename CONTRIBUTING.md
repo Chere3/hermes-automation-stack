@@ -18,8 +18,10 @@ Open an issue before adding a new live write path, private/undocumented API, or 
 ```bash
 git clone https://github.com/Chere3/hermes-automation-stack.git
 cd hermes-automation-stack
+python -m pip install -r requirements-dev.txt
 python -m compileall -q scripts skills
 PYTHONPATH=scripts python -m unittest discover -s scripts/tests -p 'test_*.py' -v
+PYTHONPATH=scripts python scripts/validate_docs.py
 ```
 
 Optional dependencies can be installed in a virtual environment from `requirements.txt`.
